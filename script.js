@@ -66,18 +66,18 @@ let user = "Rohan"
 const quizQuestions = [
     {
         question: "What is Nidhu's favorite color?",
-        options: ["Blue", "Red", "Green", "Yellow"],
-        answer: "Red"
+        options: ["Blue", "Black", "Green", "Yellow"],
+        answer: "Black"
     },
     {
         question: `Whom Nidhu like the most?`,
         options: ["Cricket", "Football", "Basketball", "Friends"],
-        answer: "Paglu"
+        answer: "Friends"
     },
     {
         question: `What is Nidhu's zodiac sign?`,
         options: ["Sagittarius", "Virgo", "Leo", "Cancer"],
-        answer: "Sagittarius"
+        answer: "Cancer"
     }
 ];
 
