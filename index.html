@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Nidhu</title>
+
+  <link rel="icon" type="image/x-icon" href="facicon.ico">
+
+  <!-- Meta Description: This should be a brief summary of your website -->
+  <meta name="description"
+    content="Celebrate Nidhu's birthday with a fun countdown! Created by Yash Arora. Click the button to see the magic!">
+
+  <!-- Meta Keywords: Add relevant keywords separated by commas -->
+  <meta name="keywords"
+    content="happy birthday nidhu, happy birthday, yash arora, education yash, yash education, github, birthday countdown, birthday surprise, fun birthday website">
+
+  <!-- Author  -->
+  <meta name="author" content="Yash Arora">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.10.0/dist/ffmpeg.min.js"></script>
+</head>
+
+<body>
+  <div class="count">
+    <span id="count"></span>
+  </div>
+  <div class="wish">
+    <h1 id="wish">Happy Birthday <br><span id="real">Nidhu</span> </h1>
+  </div>
+  <div class="magic">
+    <span id="magicSpan" onclick="updateName()">Click to see magic</span>
+  </div>
+
+  <!-- New Idea -->
+
+  <div id="need" class="hidden"><video
+      src="videoplayback.mp4"></video></div>
+  <div id="surpriseContainer" class="hidden">
+    <img src="cake.jpg" alt="Birthday Cake" id="cake">
+    <div id="balloons"></div>
+    <!-- Testing -->
+    <img src="nidhu.jpg" width=400px id="rohanImage">
+    <div id="fireworks"></div>
+    <h2 id="birthdayText">Happy Birthday <br><span id="realNew">Nidhu!</span></h2>
+  </div>
+
+  <!-- Quiz -->
+  <div id="quizContainer" class="hidden">
+    <h2 id="quizHead">How Well Do You Know Nidhu?</h2>
+    <div id="quizQuestion"></div>
+    <div id="quizOptions"></div>
+    <button id="nextQuestion">Next</button>
+    <div id="quizScore"></div>
+    <button onclick="toggleBalanceGame()" style="position: relative;top: 94px;">Play Number Balance Puzzle</button>
+  </div>
+
+  <!-- Game -->
+
+  <div id="balanceGameContainer" class="hidden">
+    <h2 class="gameTitle">Number Balance Puzzle</h2>
+    <p class="gameInstruction">Drag and drop numbers into the left and right scales to balance their totals!</p>
+    <div class="scales">
+      <div id="leftScale" class="scale">
+        <h3>Left Scale</h3>
+        <div class="dropZone"></div>
+        <p id="leftTotal">Total: 0</p>
+      </div>
+      <div id="rightScale" class="scale">
+        <h3>Right Scale</h3>
+        <div class="dropZone"></div>
+        <p id="rightTotal">Total: 0</p>
+      </div>
+    </div>
+    <div class="numberOptions">
+      <h3>Drag These Numbers</h3>
+      <div id="numberList"></div>
+    </div>
+    <p id="gameResult"></p>
+    <button id="resetGameButton" onclick="startBalanceGame()">Reset Game</button>
+  </div>
+
+
+  <!-- Message -->
+  <!-- Main Container -->
+  <div class="container">
+    <h2>Contact Developer</h2>
+    <p style="color: orangered;font-size: 16px;">(Only for Nidhu)</p>
+
+    <!-- Password Input Section -->
+    <div id="password-section">
+      <input type="password" id="password" placeholder="Enter Password" required>
+      <input type="submit" value="Submit" id="password-submit" onclick="checkPassword()">
+    </div>
+
+    <!-- Message Form Section (Initially hidden) -->
+    <div id="message-form" class="hidden">
+      <h3>Send a Message</h3>
+
+      <!-- Form send message -->
+      <form id="form">
+        <div class="form-group">
+          <!-- <label for="photo">Upload Your Photo:</label>
+          <input type="file" id="photo" name="photo" required> -->
+        </div>
+
+        <div class="form-group">
+          <label for="message">Write Your Message:</label>
+          <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+        </div>
+
+        <input type="submit" value="Send Greeting">
+      </form>
+    </div>
+  </div>
+  <!-- End Idea 
+  <center><button class="update" onclick="update()" style="margin: 40px;">Let's Create</button></center> -->
+  <div class="custom">
+    <label for="name" style="color: orange;">Enter Name:</label>
+    <input type="text" name="" id="name" size="25.7"><br><br>
+    <label for="dob" style="color: orange;">Wishing Time:</label>
+    <input type="datetime-local" name="" id="dob"><br><br>
+    <label for="photoUpload" style="color: orange;">Upload birthday person image(portrait):</label>
+    <input type="file" id="photoUpload" accept="image/*" style="border: none;">
+    <label for="photoUploadCake" style="color: orange;">Upload Cake Image:</label>
+    <input type="file" id="photoUploadCake" accept="image/*" style="border: none;">
+    <label for="videoUpload" style="color: orange;">Upload video for birthday(Optional)</label>
+    <input type="file" id="videoUpload" accept="video/*" style="border: none;">
+    <input type="submit" value="Submit" onclick="setCountdown();updateName()">
+  </div>
+  <!-- Recording -->
+  <div id="countdown"></div>
+  <p id="timer" style="color: white;text-align: center;display: none;">Recording: 0s</p>
+  <center>
+  <button id="startBtn">Start Recording</button><br>
+  <button id="stopBtn">Stop Recording</button>
+  </center>
+
+
+  <div class="span">Created by Yash Arora on 06 July 2025</div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
